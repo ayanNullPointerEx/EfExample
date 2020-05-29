@@ -12,7 +12,12 @@ Basic Program to -
         docker run --name postgres -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres:latest
         docker run -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' -d dpage/pgadmin4
 ```
-        Note: Hostname = docker inspect <postgres-dockerContainerId> | grep IPAddress
+   
+**Note:** Command to get Database ***Hostname*** used in pgAdmin
+
+```bash
+ docker inspect <postgres-dockerContainerId> | grep IPAddress
+```
 
 2. Install EF Framework (if not already installed)
 ```bash
@@ -21,10 +26,12 @@ Basic Program to -
 3. Create Migration script using - 
 ```bash
         dotnet ef migrations add InitialState
+
         dotnet ef database update
 ```
 4. Run the program.
 
 ## Output -
+
 
 ![img.jpg](https://github.com/ayanNullPointerEx/EfExample/blob/master/img.jpg)
