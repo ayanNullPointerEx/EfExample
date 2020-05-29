@@ -20,3 +20,7 @@ Steps -
         dotnet ef database update
 
 4. Run the program.
+
+Output - 
+--------------------------------
+![img.jpg](https://github.com/ayanNullPointerEx/EfExample/blob/master/img.jpg)
