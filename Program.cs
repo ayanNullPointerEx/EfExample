@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+* VERSION - 2.0.0
+*/
+
+using System;
 using Domain;
 using Database;
 
@@ -8,19 +12,10 @@ namespace EFExample
     {
         static void Main(string[] args)
         {
-            var student = new Student
-            {
-                StudentId = 2,
-                Name = "Ayan"
-            };
-            Console.WriteLine("Before saving data to DB - ");
-            Console.WriteLine("Student - id = " + student.StudentId + " name = " +student.Name);
-            using(var context = new SchoolContext())
+            using(var context = new SchoolDBContext())
             {
                 var studentsDB = context.students;
-                studentsDB.Add(student);
-                context.SaveChanges();
-                Console.WriteLine("Entity saved in DB!\n Fetching data from DB");
+                Console.WriteLine("Fetching Data from DB - ");
                 foreach(var s in studentsDB)
                 {
                     Console.WriteLine("Student - id = " + s.StudentId + " name = " +s.Name);

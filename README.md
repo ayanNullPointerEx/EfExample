@@ -5,6 +5,10 @@ Basic Program to -
  * Code-First approach in creating Table
  * Read/Write operation to DB
 
+### Version -
+ * version 1.0.0 - Basic EF Framework
+ * version 2.0.0 - Adding Seed Data
+
 ### Steps -
 
 1. Run postgres DB n check via pgAdmin UI
